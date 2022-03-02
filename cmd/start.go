@@ -3,7 +3,7 @@ package cmd
 import (
 	"log"
 
-	"split-remind/pkg/balance"
+	"eywa/pkg/balance"
 
 	"github.com/spf13/cobra"
 )
@@ -26,7 +26,7 @@ var startCmd = &cobra.Command{
 func init() {
 	rootCmd.AddCommand(startCmd)
 
-	startCmd.LocalFlags().StringVar(&config.PayeeName, "name", "Test User", "name of the payee")
-	startCmd.LocalFlags().StringVarP(&config.Port, "port", "p", ":8080", "port to start the server")
-	startCmd.LocalFlags().BoolVar(&config.StartServer, "server", true, "to start the URL server")
+	startCmd.PersistentFlags().StringVar(&config.PayeeName, "name", "Test User", "name of the payee")
+	startCmd.PersistentFlags().StringVarP(&config.Port, "port", "p", ":8080", "port to start the server")
+	startCmd.PersistentFlags().BoolVar(&config.StartServer, "server", true, "to start the URL server")
 }

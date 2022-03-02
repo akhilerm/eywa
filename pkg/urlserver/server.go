@@ -7,7 +7,7 @@ import (
 
 	"github.com/go-chi/chi/v5"
 
-	"split-remind/pkg/shortener"
+	"eywa/pkg/shortener"
 )
 
 type Config struct {

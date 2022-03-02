@@ -1,4 +1,4 @@
-module split-remind
+module eywa
 
 go 1.17
 

@@ -1,6 +1,6 @@
 package main
 
-import "split-remind/cmd"
+import "eywa/cmd"
 
 func main() {
 	cmd.Execute()

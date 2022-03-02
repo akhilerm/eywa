@@ -10,9 +10,9 @@ import (
 
 	"github.com/anvari1313/splitwise.go"
 
-	"split-remind/pkg/shortener"
-	"split-remind/pkg/upi"
-	"split-remind/pkg/urlserver"
+	"eywa/pkg/shortener"
+	"eywa/pkg/upi"
+	"eywa/pkg/urlserver"
 )
 
 const SPLITWISEAPIKEYENV = "SPLIT_KEY"
@@ -78,6 +78,9 @@ func Run(config Config) error {
 			}
 			if config.StartServer && err == nil {
 				log.Printf("%s: http://0.0.0.0%s/%s", name, config.Port, hash)
+			} else {
+				// if server is not running log the payment URL
+				log.Printf("%s: %s", name, paymentURL)
 			}
 		}
 	}
